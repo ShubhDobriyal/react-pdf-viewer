@@ -8,7 +8,7 @@ import {
   Download,
   Printer,
   Sidebar
-} from 'lucide-react';
+} from './icons';
 
 interface ToolbarProps {
   currentPage: number;

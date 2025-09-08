@@ -295,7 +295,7 @@
 
 /* Sidebar Styles */
 .pdf-sidebar {
-  width: 260px;
+  width: 200px;
   background: white;
   border-right: 1px solid #ddd;
   display: flex;
@@ -358,8 +358,9 @@
 
 .thumbnail-item {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   padding: 8px;
   cursor: pointer;
   border-radius: 4px;
@@ -377,8 +378,8 @@
 }
 
 .thumbnail-image {
-  width: 48px;
-  height: 64px;
+  width: 64px;
+  height: 85px;
   border: 1px solid #ddd;
   display: flex;
   align-items: center;
@@ -405,6 +406,8 @@
 .thumbnail-label {
   font-size: 14px;
   color: #333;
+  text-align: center;
+  min-width: 100%;
 }
 
 /* Outline Panel */
@@ -691,7 +694,7 @@
     z-index: 1000;
     transform: translateX(-100%);
     transition: transform 0.3s ease;
-    width: 280px; /* Slightly wider on mobile */
+    width: 220px; /* Adjusted for new sidebar width */
   }
   
   .pdf-sidebar.open {
@@ -845,7 +848,7 @@
   }
   
   .pdf-sidebar {
-    width: 260px; /* Slightly smaller on very small screens */
+    width: 200px; /* Consistent with desktop */
   }
   
   .toolbar-separator {
@@ -857,7 +860,7 @@
 /* Tablet landscape and small desktop */
 @media (min-width: 769px) and (max-width: 1024px) {
   .pdf-sidebar {
-    width: 240px;
+    width: 200px;
   }
   
   .scale-select {
@@ -872,7 +875,7 @@
 /* Large desktop */
 @media (min-width: 1025px) {
   .pdf-sidebar {
-    width: 260px;
+    width: 200px;
   }
   
   .search-popover {

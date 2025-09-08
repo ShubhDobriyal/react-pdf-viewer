@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { FileText } from 'lucide-react';
+import { FileText } from './icons';
 
 interface SidebarProps {
   isOpen: boolean;

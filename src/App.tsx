@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="App">
       <PDFViewer
-        pdfUrl="ebk-five-ways-unstructured-data-explosion.pdf"
+        pdfUrl="https://mozilla.github.io/pdf.js/web/compressed.tracemonkey-pldi-09.pdf"
         onError={handleError}
         onDocumentLoad={handleDocumentLoad}
       />

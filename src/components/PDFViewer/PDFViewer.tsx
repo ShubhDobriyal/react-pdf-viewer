@@ -115,7 +115,7 @@ const PDFViewer: React.FC<PDFViewerProps> = ({
 
   const handleAutoZoom = useCallback(() => {
     if (pageContainerRef.current && viewerRef.current && state.document) {
-      const containerWidth = viewerRef.current.clientWidth - (state.sidebarOpen ? 260 : 0) - 40;
+      const containerWidth = viewerRef.current.clientWidth - (state.sidebarOpen ? 200 : 0) - 40;
       const containerHeight = viewerRef.current.clientHeight - 100;
       
       // Use standard A4 dimensions as fallback
@@ -135,7 +135,7 @@ const PDFViewer: React.FC<PDFViewerProps> = ({
 
   const handleFitToWidth = useCallback(() => {
     if (pageContainerRef.current && viewerRef.current) {
-      const containerWidth = viewerRef.current.clientWidth - (state.sidebarOpen ? 260 : 0) - 40;
+      const containerWidth = viewerRef.current.clientWidth - (state.sidebarOpen ? 200 : 0) - 40;
       const pageWidth = 595; // A4 width in points
       const scale = containerWidth / pageWidth;
       const clampedScale = Math.max(0.1, Math.min(10, scale));
@@ -146,7 +146,7 @@ const PDFViewer: React.FC<PDFViewerProps> = ({
   const handleFitToPage = useCallback(() => {
     if (pageContainerRef.current && viewerRef.current) {
       const containerHeight = viewerRef.current.clientHeight - 100; // Account for toolbar
-      const containerWidth = viewerRef.current.clientWidth - (state.sidebarOpen ? 260 : 0) - 40;
+      const containerWidth = viewerRef.current.clientWidth - (state.sidebarOpen ? 200 : 0) - 40;
       
       const pageWidth = 595; // A4 width in points
       const pageHeight = 842; // A4 height in points
