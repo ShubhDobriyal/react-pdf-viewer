@@ -188,6 +188,7 @@ const Toolbar: React.FC<ToolbarProps> = ({
             className="page-input"
             disabled={isLoading}
             aria-label="Current Page"
+            inputMode="numeric"
           />
           <span className="page-label">of {numPages}</span>
         </div>

@@ -541,6 +541,16 @@ const PDFViewer: React.FC<PDFViewerProps> = ({
 
   // Auto-resize when window or sidebar changes
   useEffect(() => {
+    const handleResize = () => {
+      if (zoomMode === 'auto') {
+        handleAutoZoom();
+      } else if (zoomMode === 'page-fit') {
+        handleFitToPage();
+      } else if (zoomMode === 'page-width') {
+        handleFitToWidth();
+      }
+    };
+
     if (zoomMode === 'auto') {
       handleAutoZoom();
     } else if (zoomMode === 'page-fit') {
@@ -548,6 +558,10 @@ const PDFViewer: React.FC<PDFViewerProps> = ({
     } else if (zoomMode === 'page-width') {
       handleFitToWidth();
     }
+    
+    // Add resize listener for responsive zoom adjustments
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, [zoomMode, state.sidebarOpen, handleAutoZoom, handleFitToPage, handleFitToWidth]);
 
   return (
